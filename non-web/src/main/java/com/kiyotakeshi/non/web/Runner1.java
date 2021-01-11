@@ -5,8 +5,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Runner1 {
     public static void main(String[] args) {
-        var context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+        System.out.println(Runner1.class.getSimpleName());
 
+        var context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
         context.registerShutdownHook();
 

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Runner2 {
     public static void main(String[] args) {
 
+        System.out.println(Runner2.class.getSimpleName());
         // try-with-resources
         // AnnotationConfigApplicationContext -> GenericApplicationContext -> ConfigurableApplicationContext
         // ConfigurableApplicationContext extends Closeable(AutoCloseable), so we can use try-with-resources to

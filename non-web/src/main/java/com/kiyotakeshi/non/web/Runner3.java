@@ -7,6 +7,8 @@ import java.io.IOException;
 
 public class Runner3 {
     public static void main(String[] args) throws IOException {
+        System.out.println(Runner3.class.getSimpleName());
+
         var context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
         var bean1 = context.getBean(Bean1.class);

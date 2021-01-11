@@ -14,7 +14,23 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<spring.boot.mainClass>com.kiyotakeshi.non.web.Runner1</spring.boot.mainClass>
 	</properties>
+
+	<profiles>
+		<profile>
+			<id>2</id>
+			<properties>
+				<spring.boot.mainClass>com.kiyotakeshi.non.web.Runner2</spring.boot.mainClass>
+			</properties>
+		</profile>
+		<profile>
+			<id>3</id>
+			<properties>
+				<spring.boot.mainClass>com.kiyotakeshi.non.web.Runner3</spring.boot.mainClass>
+			</properties>
+		</profile>
+	</profiles>
 
 	<dependencies>
 		<dependency>
@@ -27,5 +43,17 @@
 			<artifactId>javax.annotation-api</artifactId>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>${spring.boot.mainClass}</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
